@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Receipt Generator - Sankalp Library</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>SANKALP LIBRARY DOMCHANCH</h1>
+    <p class="address">City Complex, Near SBI Domchanch<br>Giridih Road, Domchanch 825418<br>7544032365, 9572939681</p>
+
+    <form id="receiptForm">
+      <input type="text" id="studentName" placeholder="Student Name" required />
+      <input type="text" id="studentPhone" placeholder="Student Contact No." required />
+      <input type="text" id="seatNumber" placeholder="Seat No." required />
+      <input type="text" id="hoursOpted" placeholder="Hours Opted" required />
+      <input type="number" id="feesPaid" placeholder="Fees Paid (₹)" required />
+      <input type="number" id="remainingDues" placeholder="Remaining Dues (₹)" required />
+      <input type="text" id="monthPaid" placeholder="Month of Fees Paid" required />
+      <button type="submit">Generate Receipt</button>
+    </form>
+
+    <div id="receipt" class="receipt hidden">
+      <img src="logo.png" class="watermark" alt="Logo"/>
+      <div class="header">
+        <h2>SANKALP LIBRARY DOMCHANCH</h2>
+        <p>City Complex, Near SBI Domchanch<br>Giridih Road, Domchanch 825418<br>7544032365, 9572939681</p>
+      </div>
+      <div class="body">
+        <p><strong>Student Name:</strong> <span id="rName"></span></p>
+        <p><strong>Contact No:</strong> <span id="rPhone"></span></p>
+        <p><strong>Seat No:</strong> <span id="rSeat"></span></p>
+        <p><strong>Hours Opted:</strong> <span id="rHours"></span></p>
+        <p><strong>Fees Paid:</strong> ₹<span id="rPaid"></span></p>
+        <p><strong>Remaining Dues:</strong> ₹<span id="rDues"></span></p>
+        <p><strong>Month of Fees Paid:</strong> <span id="rMonth"></span></p>
+      </div>
+      <div class="footer">
+        <div class="left">
+          <p><strong>Receipt Guidelines:</strong></p>
+          <ol>
+            <li>Please keep this receipt for future reference.</li>
+            <li>Contact us for any discrepancy immediately.</li>
+          </ol>
+        </div>
+        <div class="right">
+          <p><strong>SANKALP LIBRARY</strong></p>
+          <img src="sign.png" class="signature" alt="Signature"/>
+        </div>
+      </div>
+    </div>
+
+    <a id="whatsappLink" class="hidden" target="_blank">Send via WhatsApp</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
